@@ -1,0 +1,5 @@
+name: something
+description: for greeting js
+runs:
+  using: 'node20'
+  main: 'main.js'

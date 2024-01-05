@@ -1,5 +1,5 @@
 name: Using the composite action
-on: [push]
+on: [workflow_dispatch]
 jobs:
   hello_world_job:
     runs-on: ubuntu-latest
