@@ -1,0 +1,14 @@
+name: Using the composite action
+on: [push]
+jobs:
+  hello_world_job:
+    runs-on: ubuntu-latest
+    name: A job to say some greetings
+    steps:
+      - uses: actions/checkout@v4
+      - id: ryan
+        uses: ./.github/greetings
+        with:
+          who-to-greet: "Ryan-the-greatest"
+      - run: echo "random-number; ${{ steps.ryan.outputs.random-number }}"
+        shell: bash
